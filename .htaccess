@@ -1,0 +1,72 @@
+#AuthName "Restricted Area"
+#AuthType Basic
+#AuthUserFile .htpasswd
+#require valid-user
+
+Options +FollowSymLinks
+
+# Turn on Expires and set default to 0
+ExpiresActive On
+ExpiresDefault A0
+ 
+# Set up caching on media files for 1 year (forever?)
+<filesMatch "\.(flv|ico|pdf|avi|mov|ppt|doc|mp3|wmv|wav)$">
+ExpiresDefault A29030400
+Header append Cache-Control "public"
+</filesMatch>
+ 
+# Set up caching on media files for 1 week
+<filesMatch "\.(gif|jpg|jpeg|png|swf|ico)$">
+ExpiresDefault A604800
+Header append Cache-Control "public"
+</filesMatch>
+ 
+# Set up 2 Hour caching on commonly updated files
+<filesMatch "\.(xml|txt|html|js|css)$">
+ExpiresDefault A7200
+Header append Cache-Control "proxy-revalidate"
+</filesMatch>
+ 
+# Force no caching for dynamic files
+<filesMatch "\.(php|cgi|pl|htm)$">
+ExpiresActive Off
+Header set Cache-Control "private, no-cache, no-store, proxy-revalidate, no-transform"
+Header set Pragma "no-cache"
+</filesMatch>
+
+IndexIgnore */*
+
+RewriteEngine on
+
+
+#Uncomment "RewriteBase /" when you upload this .htaccess to your web server, and comment it when on local web server
+
+#NOTE: 
+
+#If your application is in a folder, for example "application". Then, changing the "application" folder name, will require you to reset the RewriteBase /[your app folder]
+
+#RewriteBase /[your app folder - optional]
+
+
+# if a directory or a file exists, use it directly
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+
+RewriteCond %{REQUEST_FILENAME} -d
+
+
+
+# otherwise forward it to index.php 
+
+RewriteRule ^.*$ - [NC,L]
+
+RewriteRule ^.*$ index.php [NC,L]
+
+order allow,deny
+deny from 212.24.61.167
+deny from 118.123.240.176
+deny from 81.169.181.179
+deny from 180.153.214.191
+allow from all

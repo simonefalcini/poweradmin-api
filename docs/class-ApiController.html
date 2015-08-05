@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class ApiController | PowerDnsApi</title>
+
+	<script type="text/javascript" src="resources/combined.js?3235203294"></script>
+	<script type="text/javascript" src="elementlist.js?969005169"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-ApiController.html">ApiController</a></li>
+				<li><a href="class-ContactForm.html">ContactForm</a></li>
+				<li><a href="class-Controller.html">Controller</a></li>
+				<li><a href="class-Domain.html">Domain</a></li>
+				<li><a href="class-LoginForm.html">LoginForm</a></li>
+				<li><a href="class-Record.html">Record</a></li>
+				<li><a href="class-SiteTest.html">SiteTest</a></li>
+				<li><a href="class-UserIdentity.html">UserIdentity</a></li>
+				<li><a href="class-WebTestCase.html">WebTestCase</a></li>
+				<li><a href="class-Yii.html">Yii</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class ApiController</h1>
+
+
+	<div class="description">
+	
+<p>Controller is the customized base controller class. All controller classes
+for this application should extend from this base class.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+CController
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-Controller.html"><span>Controller</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>ApiController</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+		<b>Located at</b> protected/controllers/ApiController.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="beforeAction" id="_beforeAction">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_beforeAction">#</a>
+		<code>beforeAction( <span>mixed <var>$action</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="actionAddDomain" id="_actionAddDomain">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_actionAddDomain">#</a>
+		<code>actionAddDomain( <span>string <var>$name</var></span>, <span>string <var>$type</var> = <code><a href="class-Domain.html#TYPE_MASTER">Domain::<b>TYPE_MASTER</b></a></code></span>, <span>integer <var>$template_id</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a domain to the database</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a domain to the database</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name The name of the domain</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>type The type of the domain. Can be:<br />
+MASTER NATIVE</dd>
+					<dt><var>$template_id</var></dt>
+					<dd><code>integer</code><br>$template_id An optional template ID to be loaded in the domain</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>{result:boolean,error_code:int,error_message:string} A json encoded array
+containing: result: true if the domain has been created, false otherwise
+error_code: the code of the error. 0 means no error error_message: the
+explanation of the error<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="actionIndex" id="_actionIndex">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_actionIndex">#</a>
+		<code>actionIndex( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="actionAddRecord" id="_actionAddRecord">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_actionAddRecord">#</a>
+		<code>actionAddRecord( <span>string <var>$domain</var></span>, <span>string <var>$name</var></span>, <span>string <var>$type</var></span>, <span>string <var>$content</var></span>, <span>string <var>$ttl</var> = <span class="php-num">3600</span></span>, <span>integer <var>$priority</var> = <span class="php-num">0</span></span>, <span>boolean <var>$autoUpdateSOA</var> = <span class="php-keyword1">true</span></span>, <span>mixed <var>$_output</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a record to an existing database</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a record to an existing database</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$domain</var></dt>
+					<dd><code>string</code><br>$domain The domain name (without www)</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name The name of the record</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type The type of the record. Can be:<br />
+A AAAA CNAME HINFO MX NAPTR NS PTR SOA SPF SRV SSHFP TXT RP</dd>
+					<dt><var>$content</var></dt>
+					<dd><code>string</code><br>$content The content of the record</dd>
+					<dt><var>$ttl</var></dt>
+					<dd><code>string</code><br>$ttl The expiration time of the record in seconds. Defaults to <b>3600</b></dd>
+					<dt><var>$priority</var></dt>
+					<dd><code>integer</code><br>$priority The priority of the record. Defaults to <b>0</b></dd>
+					<dt><var>$autoUpdateSOA</var></dt>
+					<dd><code>boolean</code><br>$autoUpdateSOA Set to <b>true</b> if you want to update automatically the SOA
+record. If set to <b>false</b> you need to update the SOA record manually</dd>
+					<dt><var>$_output</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>{result:boolean,error_code:int,error_message:string} A json encoded array
+containing: result: true if the record has been created, false otherwise
+error_code: the code of the error. 0 means no error error_message: the
+explanation of the error<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="actionListRecords" id="_actionListRecords">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_actionListRecords">#</a>
+		<code>actionListRecords( <span>String <var>$domain</var></span>, <span>mixed <var>$_output</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>List all records for a specific domain</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>List all records for a specific domain</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$domain</var></dt>
+					<dd><code>String</code><br>$domain The domain to select</dd>
+					<dt><var>$_output</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>{result:boolean,error_code:int,error_message:string} A json encoded array
+containing: result: an array with the record details {<a
+href="&quot;test.com&quot;,&quot;type&quot;:&quot;CNAME&quot;,&quot;content&quot;:&quot;domee.elasticbeanstalk.com&quot;,&quot;ttl&quot;:&quot;3600&quot;,&quot;prio&quot;:&quot;0&quot;,&quot;change_date&quot;:null}">name</a>
+false otherwise error_code: the code of the error. 0 means no error
+error_message: the explanation of the error<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="actionEditRecord" id="_actionEditRecord">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_actionEditRecord">#</a>
+		<code>actionEditRecord( <span>string <var>$domain</var></span>, <span>string <var>$name</var></span>, <span>type <var>$type</var></span>, <span>type <var>$content</var></span>, <span>type <var>$ttl</var> = <span class="php-keyword1">null</span></span>, <span>type <var>$priority</var> = <span class="php-keyword1">null</span></span>, <span>type <var>$_output</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Edit a specific record</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Edit a specific record</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$domain</var></dt>
+					<dd><code>string</code><br>$domain The domain (zone)</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name The record to edit</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>type</code><br>$type The type of record to edit</dd>
+					<dt><var>$content</var></dt>
+					<dd><code>type</code><br>$content The new content to set</dd>
+					<dt><var>$ttl</var></dt>
+					<dd><code>type</code><br>$ttl The new ttl to set</dd>
+					<dt><var>$priority</var></dt>
+					<dd><code>type</code><br>$priority The new priority to set</dd>
+					<dt><var>$_output</var></dt>
+					<dd><code>type</code><br>$_output</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>{result:boolean,error_code:int,error_message:string} A json encoded array
+containing: result: true if the domain has been created, false otherwise
+error_code: the code of the error. 0 means no error error_message: the
+explanation of the error<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="actionDeleteRecord" id="_actionDeleteRecord">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_actionDeleteRecord">#</a>
+		<code>actionDeleteRecord( <span>string <var>$domain</var></span>, <span>string <var>$name</var></span>, <span>string <var>$type</var></span>, <span>string <var>$content</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$_output</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Delete specific records</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Delete specific records</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$domain</var></dt>
+					<dd><code>string</code><br>$domain The domain to select</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name The record name</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type The record type</dd>
+					<dt><var>$content</var></dt>
+					<dd><code>string</code><br>$type The content to delete [optional]</dd>
+					<dt><var>$_output</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>{result:boolean,error_code:int,error_message:string} A json encoded array
+containing: result: true if the domain has been created, false otherwise
+error_code: the code of the error. 0 means no error error_message: the
+explanation of the error<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="actionAddSoa" id="_actionAddSoa">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_actionAddSoa">#</a>
+		<code>actionAddSoa( <span>mixed <var>$domain</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="actionError" id="_actionError">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_actionError">#</a>
+		<code>actionError( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="ERROR_VALIDATION_CODE" id="ERROR_VALIDATION_CODE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>ERROR_VALIDATION_CODE</b>		</code></td>
+		<td class="value"><code><span class="php-num">1</span></code></td>
+		<td class="description"><div>
+			<a href="#ERROR_VALIDATION_CODE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ERROR_TEMPLATE_CODE" id="ERROR_TEMPLATE_CODE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>ERROR_TEMPLATE_CODE</b>		</code></td>
+		<td class="value"><code><span class="php-num">2</span></code></td>
+		<td class="description"><div>
+			<a href="#ERROR_TEMPLATE_CODE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ERROR_DOMAIN_NOT_FOUND" id="ERROR_DOMAIN_NOT_FOUND">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>ERROR_DOMAIN_NOT_FOUND</b>		</code></td>
+		<td class="value"><code><span class="php-num">3</span></code></td>
+		<td class="description"><div>
+			<a href="#ERROR_DOMAIN_NOT_FOUND" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ERROR_SOA_UPDATE_CODE" id="ERROR_SOA_UPDATE_CODE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>ERROR_SOA_UPDATE_CODE</b>		</code></td>
+		<td class="value"><code><span class="php-num">4</span></code></td>
+		<td class="description"><div>
+			<a href="#ERROR_SOA_UPDATE_CODE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ERROR_SOA_CREATE_CODE" id="ERROR_SOA_CREATE_CODE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>ERROR_SOA_CREATE_CODE</b>		</code></td>
+		<td class="value"><code><span class="php-num">5</span></code></td>
+		<td class="description"><div>
+			<a href="#ERROR_SOA_CREATE_CODE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ERROR_SOA_ALREADY_EXISTING_CODE" id="ERROR_SOA_ALREADY_EXISTING_CODE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>ERROR_SOA_ALREADY_EXISTING_CODE</b>		</code></td>
+		<td class="value"><code><span class="php-num">6</span></code></td>
+		<td class="description"><div>
+			<a href="#ERROR_SOA_ALREADY_EXISTING_CODE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ERROR_DOMAIN_ALREADY_EXISTING_CODE" id="ERROR_DOMAIN_ALREADY_EXISTING_CODE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>ERROR_DOMAIN_ALREADY_EXISTING_CODE</b>		</code></td>
+		<td class="value"><code><span class="php-num">7</span></code></td>
+		<td class="description"><div>
+			<a href="#ERROR_DOMAIN_ALREADY_EXISTING_CODE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ERROR_RECORD_NOT_FOUND" id="ERROR_RECORD_NOT_FOUND">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>ERROR_RECORD_NOT_FOUND</b>		</code></td>
+		<td class="value"><code><span class="php-num">8</span></code></td>
+		<td class="description"><div>
+			<a href="#ERROR_RECORD_NOT_FOUND" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="layout" id="$layout">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+<var>$layout</var>		</td>
+		<td class="value"><code><span class="php-quote">'//layouts/json'</span></code></td>
+		<td class="description"><div>
+			<a href="#$layout" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>the default layout for the controller view. Defaults to '//layouts/column1',
+meaning using a single column layout. See
+'protected/views/layouts/column1.php'.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>the default layout for the controller view. Defaults to '//layouts/column1',
+meaning using a single column layout. See
+'protected/views/layouts/column1.php'.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Controller.html#properties">Controller</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Controller.html#$breadcrumbs"><var>$breadcrumbs</var></a>, 
+			<a href="class-Controller.html#$menu"><var>$menu</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PowerDnsApi API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
