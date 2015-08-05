@@ -12,11 +12,12 @@ class ApiController extends Controller {
     const ERROR_RECORD_NOT_FOUND = 8;
     const ERROR_RECORDS_MALFORMED = 9;
     
-    private $access_password = 'SPECIFY-A-PASSWORD';
+    private $access_password;
     
     public $layout='//layouts/json';
     
-    public function beforeAction($action) {        
+    public function beforeAction($action) { 
+        $this->access_password = getenv('PDNS_PASSWORD');       
         if (parent::beforeAction($action)) {
             // Check if the password parameter exists and is correct
             if (isset($_REQUEST['pass']) && $_REQUEST['pass'] == $this->access_password) {
