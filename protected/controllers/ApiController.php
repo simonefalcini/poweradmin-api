@@ -344,7 +344,7 @@ class ApiController extends Controller {
                     }
                     if (!$r->save()) {
                         $error['code'] = self::ERROR_VALIDATION_CODE;
-                        $error['message'] = $record->getErrors();
+                        $error['message'] = print_r($r->getErrors(),true);
                         $result = false;
                         break;
                     }                    
